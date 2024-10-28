@@ -4,7 +4,7 @@ A note about Three-Level Resource ID.
 ### 三级Resource ID
 
 可以使用形如“DatabaseID-PartionID-RecordID”的三级Resource ID：
-- 第1级是Database ID，根据Database ID可以查询到对应的Database Connection。
+- 第1级是Database ID，根据Database ID可以查询到对应的Database Connection Parameters和Database Connection。
 - 第2级是Partion ID，只要求在对应的Database中具有唯一性，隐含的Resource Type串联Partion ID就是表名。
 - 第3级是Record ID，只要求在对应的表中具有唯一性。
 
