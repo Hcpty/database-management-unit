@@ -14,7 +14,7 @@ A note about Three-Level Resource ID.
 
 注意由于使用了“-”符号连接，所以Database ID、Partion ID和Record ID不需要根据起始位置和长度进行区分。
 
-一般情况下，面向用户时应该使用具有语义的名词作为资源的定位符，然后应用程序通过散列表查询对应的三级Resource ID，即这种三级Resource ID只应该面向程序员。
+一般情况下，面向用户时应该使用具有语义的名词作为资源的定位符，然后应用程序通过散列表查询对应的三级Resource ID，即这种三级Resource ID只应该面向程序编写者。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
