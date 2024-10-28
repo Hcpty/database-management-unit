@@ -14,5 +14,7 @@ A note about Three-Level Resource ID.
 
 注意由于使用了“-”符号连接，所以Database ID、Partion ID和Record ID不需要根据起始位置和长度进行区分。
 
+注意对于Key-Value Database可以使用“/”连接和分隔表名和ID。
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
