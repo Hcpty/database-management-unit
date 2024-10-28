@@ -10,7 +10,9 @@ A note about Three-Level Resource ID.
 
 这样做会造成处理ID的开销，好处是避免了一个单一的、巨大的表，允许每个表的尺寸都不大，从而获得可以无限增长的容量和稳定的查询速度。
 
-注意如果Record ID是多列的形式，可以使用&连接多列。
+注意如果Record ID是多列的形式，可以使用“&”符号连接多列。
+
+由于使用了“-”符号连接，所以Database ID、Partion ID和Record ID不需要根据长度进行区分，但是如果其值一旦设定，就不应该再更改。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
