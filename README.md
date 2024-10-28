@@ -12,7 +12,9 @@ A note about Three-Level Resource ID.
 
 注意如果Record ID是多列的形式，可以使用“&”符号连接多列。
 
-由于使用了“-”符号连接，所以Database ID、Partion ID和Record ID不需要根据长度进行区分，但是如果其值一旦设定，就不应该再更改。
+注意由于使用了“-”符号连接，所以Database ID、Partion ID和Record ID不需要根据起始位置和长度进行区分。
+
+一般使用具有语义的ID作为资源的定位符，然后应用程序通过散列表查询对应的三级Resource ID，即这种三级Resource ID只应该在内部使用，用户不可见。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
