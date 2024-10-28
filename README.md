@@ -10,7 +10,7 @@ A note about Three-Level Resource ID.
 
 这样做会造成处理ID的开销，好处是避免了全局唯一的Record ID，避免了一个单一的、巨大的表，允许每个表的尺寸都不大，从而能够获得可以无限增长的容量和稳定的查询速度。
 
-由于使用“-”符号进行连接和分隔，所以Database ID、Partion ID和Record ID不需要根据起始位置和长度进行定义，可以使用自由的长度。
+由于使用“-”符号进行连接和分隔，所以Database ID、Partion ID和Record ID不需要根据起始位置和长度进行定义，可以使用相对自由的长度。
 
 如果Record ID是多列的形式，可以使用“&”符号连接和分隔多列。
 
