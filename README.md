@@ -8,7 +8,7 @@ A note about Three-Level Resource ID.
 - 第2级是Partion ID，隐含的Resource Type串联Partion ID就是表名。
 - 第3级是Resource ID，只要求在对应的表中具有唯一性。
 
-这样做会增加解析ID的开销，好处是避免了一个单一的、巨大的表，允许每个表的尺寸都不大，从而获得无限增长的容量和稳定的查询速度。
+这样做会造成解析ID的开销，好处是避免了一个单一的、巨大的表，允许每个表的尺寸都不大，从而获得无限增长的容量和稳定的查询速度。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
