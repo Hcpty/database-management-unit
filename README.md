@@ -20,7 +20,7 @@ A note about Three-Level Resource ID.
 
 对已经存在的资源进行Read/Update/Delete操作时，只需要根据DatabaseID-PartitionID-RecordID去定位该资源，然后进行处理即可。
 
-对于待创建的资源，要为每一个Resource Type指定一个 Resource Type -> (Database ID, Partition ID) 的映射，以允许新建资源。当当前Partition快满时或当当前Database快满时，应该由一个Capacity Guarantor来创建新的Partition或创建新的Database和Partition并更新这个映射，而应用程序对于这种变更应该是无感知的。另外，对于进行Data Replication的Database，由于Database的数量会增长，所以相应的复制策略也应适配这种特性。
+对于待创建的资源，要为每一个Resource Type指定一个 Resource Type -> (Database ID, Partition ID) 的映射，以允许新建资源。当当前Partition快满时或当当前Database快满时，应该由一个Capacity Guarantor来创建新的Partition或创建新的Database和Partition并更新这个映射，而应用程序对于这种变更应该是无感知的。另外，对于进行Data Replication的Database，由于Database的数量会变化，所以相应的复制策略也应作出适当的调整。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
