@@ -18,6 +18,10 @@ A note about Three-Level Resource ID.
 
 如果使用的是Key-Value Database，可以使用“&”连接和分隔不同的字段。
 
+对已存在的资源进行Read/Update/Delete操作时，只需要根据DatabaseID-PartionID-RecordID去定位该资源然后处理即可。
+
+对于待创建的资源，要为每一个Resource Type指定一个确定的 (DatabaseID, PartionID, RecordID) 三元组。
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
