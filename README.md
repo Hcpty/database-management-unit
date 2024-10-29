@@ -20,7 +20,7 @@ A note about Three-Level Resource ID.
 
 对已存在的资源进行Read/Update/Delete操作时，只需要根据DatabaseID-PartionID-RecordID去定位该资源然后处理即可。
 
-对于待创建的资源，要为每一个Resource Type指定一个确定的 (Database ID, Partion ID, Record ID) 三元组。
+对于待创建的资源，要为每一个Resource Type指定一个确定的 (Database ID, Partion ID, Record ID) 三元组，以允许新建资源。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
