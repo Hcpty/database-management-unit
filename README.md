@@ -1,5 +1,5 @@
 # Readme
-A note about Redundant Array Of Independent Database Tables.
+A note about Redundant Array of Independent Database Tables.
 
 ### 数据库表冗余阵列
 
