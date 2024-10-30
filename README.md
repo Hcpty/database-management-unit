@@ -1,7 +1,7 @@
 # Readme
-A note about Redundant Array of Independent Databases.
+A note about Redundant Array of Independent Database Nodes.
 
-### 数据库冗余阵列
+### 数据库节点冗余阵列
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
