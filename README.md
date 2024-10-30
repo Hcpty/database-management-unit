@@ -1,7 +1,7 @@
 # Readme
 A note about Redundant Array of Independent Database Nodes (RAIDN).
 
-### 数据库节点冗余阵列
+### 独立数据库节点冗余阵列
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
