@@ -1,7 +1,7 @@
 # Readme
-A note about Redundant Array of Independent Database Nodes (RAIDN).
+A note about Redundant Array of Independent Nodes (RAIN).
 
-### 独立数据库节点冗余阵列
+### 独立节点冗余阵列
 
 一个Database Node中可以包含多个Database，一个Database中可以包含多个类似 (Relational Database) Table、(Document Database) Collection或 (Key-Value Database) Key Prefix的folder，一个folder可以存储多条记录。
 
