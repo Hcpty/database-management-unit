@@ -1,5 +1,5 @@
 # Readme
-A note about Redundant Array of Independent Database Nodes.
+A note about Redundant Array of Independent Database Nodes (RAIDN).
 
 ### 数据库节点冗余阵列
 
