@@ -11,6 +11,13 @@ A note about Redundant Array of Independent Database Nodes (RAIDN).
 - Resource Group Striping：把一个Resource Group进行分段，然后把每个分段分别存储到不同的物理folder中，从而获得一个巨大的逻辑folder，而且可以通过持续增加物理folder来持续扩展这个逻辑folder的容量，从而实现endless big。
 - Database Replication：在另一个Database中对目标Database中发生的读写操作进行实时重放，以获得continuous availability。
 
+形式：
+- RAIDN 0：进行Resource Group Striping。
+- RAIDN 1：进行Database Replication。
+- RAIDN 01或RAIDN 10：同时进行Resource Group Striping和Database Replication。
+
+简单而易用的是以上三种形式，借助Parity机制可以实现一些复杂而难用的形式。
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
