@@ -8,7 +8,7 @@ Database Node通常采用“Resource Group/Resource”两级的形式存储Resou
 一个Database Node中可以包含多个Database，一个Database中可以包含多个类似 (File Database) Directory、(Relational Database) Table、(Document Database) Collection或 (Key-Value Database) Key Prefix的folder，一个folder可以存储多条记录。
 
 机制：
-- Resource Group Striping：把一个Resource Group进行segmenting，然后把每个segment分别存储到不同的物理folder中，从而获得一个巨大的逻辑folder，并过持续增加物理folder来持续扩展这个逻辑folder的容量，从而实现endless big。
+- Resource Group Striping：把一个Resource Group进行segmenting，然后把每个segment分别存储到不同的物理folder中，从而获得一个巨大的逻辑folder，并且可以通过持续增加物理folder来持续扩展这个逻辑folder的容量，从而实现endless big。
 - Database Replication：在另一个Database中对目标Database中发生的读写操作进行real time replay，以获得continuous availability。
 
 形式：
