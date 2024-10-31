@@ -3,7 +3,7 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 ### 独立节点冗余阵列
 
-Database Node可以采用“Resource Group/Resource”两级的形式存储Resource。
+Database Node通常采用“Resource Group/Resource”两级的形式存储Resource。
 
 一个Database Node中可以包含多个Database，一个Database中可以包含多个类似 (File Database) Directory、(Relational Database) Table、(Document Database) Collection或 (Key-Value Database) Key Prefix的folder，一个folder可以存储多条记录。
 
