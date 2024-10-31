@@ -5,7 +5,7 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 一个Database Node中可以包含多个Database，一个Database中可以包含多个类似 (File Database) Dir、(Relational Database) Table、(Document Database) Collection或 (Key-Value Database) Key Prefix的folder，一个folder可以存储多条记录。
 
-Database Node用于存储Resource，Database Node一般在逻辑上以“Resource Group/Resource”的两级的形式存储Resource。
+Database Node用于存储Resource，通用的方式是以“Resource Group/Resource”两级的形式存储Resource。
 
 机制：
 - Resource Group Striping：把一个Resource Group进行分段，然后把每个分段分别存储到不同的物理folder中，从而获得一个巨大的逻辑folder，并过持续增加物理folder来持续扩展这个逻辑folder的容量，从而实现endless big。
