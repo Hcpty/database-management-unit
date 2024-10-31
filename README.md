@@ -12,9 +12,9 @@ Database Node通常采用“Resource Group/Resource”两级的形式存储Resou
 - Database Replication：在另一个Database中对目标Database中发生的读写操作进行real time replay，以获得continuous availability。
 
 形式：
-- RAIDN 0：进行Resource Group Striping。
-- RAIDN 1：进行Database Replication。
-- RAIDN 01或RAIDN 10：同时进行Resource Group Striping和Database Replication。
+- RAIN 0：进行Resource Group Striping。
+- RAIN 1：进行Database Replication。
+- RAIN 01或RAIN 10：同时进行Resource Group Striping和Database Replication。
 
 简单易用的是以上三种形式，借助Parity机制还可以实现一些复杂而难用的形式。
 
