@@ -28,7 +28,7 @@ Logical Address：
 Node Table：
 - Node Number -> Node Address
 
-其中，所有的Number和Offset都从0开始，并逐1往上递增。
+其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
 其中，在某些情况下，可以使用特定的Hash Function进行 Resource Type, Resource Identifier -> Logical Address 的映射，以避免使用Datum Allocation Table。
 
