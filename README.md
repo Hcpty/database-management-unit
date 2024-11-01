@@ -1,5 +1,7 @@
 # Readme
-A note about Dataspace Management Unit (DMU).
+A note about DMU (Dataspace Management Unit).
+
+DMU用于管理Dataspace，主要负责从Logical Address到Physical Address的翻译，以及为新的 (Resource Type, Resource Identifier) 二元组分配新的Physical Address。
 
 ### Logical Address
 
@@ -7,7 +9,7 @@ Logical Address数据结构包含两个字段：
 - Resource Type
 - Resource Identifier
 
-其中，Resoruce Identifier是富含语义的、用于外部使用的、面向用户的资源标识符。
+其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
 
 ### Resource Table
 
