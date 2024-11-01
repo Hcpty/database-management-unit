@@ -23,8 +23,6 @@ Logical Address -> Physical Address
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
-DMU借助Resource Allocation Table进行地址翻译和地址分配。
-
 Table Capacity、Database Capacity和Node Capacity都是可以配置的选项。
 
 ### Credits
