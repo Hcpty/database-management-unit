@@ -33,4 +33,4 @@ Node Database Table是DMU和应用程序共用的。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
-- [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID) and [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
+- [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
