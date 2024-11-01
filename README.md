@@ -3,7 +3,7 @@ A note about DMU (Dataspace Management Unit).
 
 DMU用于管理Dataspace，主要负责把Logical Address翻译成Physical Address，以及为新的 (Resource Type, Resource Identifier) 二元组分配新的Physical Address。
 
-### DMS (Dataspace Management Unit)
+### DMU (Dataspace Management Unit)
 
 Logical Address数据结构包含两个字段：
 - Resource Type
