@@ -16,8 +16,8 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 一种通用的Data Striping方法：
 
-Datum Allocation Table：
-- Datum Identifier -> Logical Address
+Resource Allocation Table：
+- Resource Type, Resource Identifier -> Logical Address
 
 Logical Address：
 - Node Number
@@ -30,7 +30,7 @@ Node Table：
 
 其中，所有的Number和Offset都从0开始，并逐1往上递增。
 
-其中，在某些情况下，可以使用特定的Hash Function进行 Datum Identifier -> Logical Address 的映射，以避免使用Datum Allocation Table。
+其中，在某些情况下，可以使用特定的Hash Function进行 Resource Type, Resource Identifier -> Logical Address 的映射，以避免使用Datum Allocation Table。
 
 一种通用的Node Mirroring方法：
 
