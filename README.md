@@ -32,6 +32,10 @@ Node Table：
 
 其中，在某些情况下，可以使用特定的Hash Function进行 Datum Identifier -> Logical Address 的映射，以避免使用Datum Allocation Table。
 
+一种通用的Node Mirroring方法：
+
+基于Database Replication实现Node Mirroring。
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
