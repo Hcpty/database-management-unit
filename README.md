@@ -24,8 +24,10 @@ Logical Address -> Physical Address
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
 可配置的选项包括：
-- Table Capacity、Database Capacity、Node Capacity
 - Resource Type、Table Creation Script
+- Table Capacity、Database Capacity、Node Capacity
+
+Resource Allocation Table是DMU在内部使用的，应用程序一般不能直接访问Resource Allocation Table。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
