@@ -34,7 +34,7 @@ Node Table：
 
 一种通用的Node Mirroring方法：
 
-基于Database Replication实现Node Mirroring。
+借助Database Replication实现Node Mirroring。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
