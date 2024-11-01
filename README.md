@@ -25,7 +25,7 @@ Logical Address -> Physical Address
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
-Resource Allocation Table是DMU私有的。
+Resource Allocation Table是DMU独用的。
 
 ### Node Database Table
 
