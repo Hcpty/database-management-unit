@@ -25,6 +25,8 @@ Logical Address -> Physical Address
 
 DMU借助Resource Allocation Table进行地址翻译和地址分配。
 
+Node Capacity、Database Capacity和Table Capacity都是可以配置的选项。
+
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
