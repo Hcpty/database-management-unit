@@ -7,9 +7,9 @@ DMU用于管理Dataspace，主要负责把Logical Address翻译成Physical Addre
 
 Resource Allocation Table：
 
-Logical Address -> Physical Address
+其中，Logical Address -> Physical Address
 
-Logical Address数据结构包含两个字段：
+其中，Logical Address数据结构包含两个字段：
 - Resource Type
 - Resource Identifier
 
