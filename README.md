@@ -14,7 +14,7 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 简单易用的是以上三种形式，借助Parity机制还可以实现一些复杂而难用的形式。
 
-下面提供一种通用的Data Striping方法：
+一种通用的Data Striping方法：
 
 Datum Allocation Table：
 - Datum Identifier -> Logical Address
