@@ -3,18 +3,14 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 ### 独立节点冗余阵列
 
-Database Node通常采用“Resource Group/Resource”两级的形式存储Resource。
-
-一个Database Node中可以包含多个Database，一个Database中可以包含多个类似 (File Database) Directory、(Relational Database) Table、(Document Database) Collection或 (Key-Value Database) Key Prefix的folder，一个folder可以存储多条记录。
-
 机制：
-- Resource Group Striping：把一个Resource Group进行segmenting，然后把每个segment分别存储到不同的物理folder中，从而获得一个巨大的逻辑folder，并且可以通过持续增加物理folder来持续扩展这个逻辑folder的容量，从而实现endless big。
-- Database Replication：在另一个Database中对目标Database中发生的读写操作进行real time replay，以获得continuous availability。
+- Data Striping：把数据进行segmenting，然后把每个segment分别存储到不同的physical node中，通过这种机制，一个大的logical node可以由多个小的physical node虚拟而成，并且可以通过持续地增加physical node来持续地扩展这个logical node的容量，从而实现endless big。
+- Node Mirroring：在另一个Node中对目标Node中发生的读写操作进行real time replay，以获得continuous availability。
 
 形式：
-- RAIN 0：进行Resource Group Striping。
-- RAIN 1：进行Database Replication。
-- RAIN 01或RAIN 10：同时进行Resource Group Striping和Database Replication。
+- RAIN 0：进行Data Striping。
+- RAIN 1：进行Node Mirroring。
+- RAIN 01或RAIN 10：同时进行Data Striping和Node Mirroring。
 
 简单易用的是以上三种形式，借助Parity机制还可以实现一些复杂而难用的形式。
 
