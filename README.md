@@ -38,7 +38,4 @@ Node Database Table是DMU和应用程序共享的。
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
-- [File Allocation Table - Wikipedia](https://en.wikipedia.org/wiki/File_Allocation_Table)
-- [Extent (file systems) - Wikipedia](https://en.wikipedia.org/wiki/Extent_(file_systems))
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
-- [Available, Big and Fast - Hcpty](https://github.com/hcpty/available-big-and-fast)
