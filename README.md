@@ -26,7 +26,7 @@ Logical Address：
 - Record Offset
 
 Node Table：
-- Node Number -> Node Connection Parameters or Node Connection
+- Node Number -> Node Connection
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
