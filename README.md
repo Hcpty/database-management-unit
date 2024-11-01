@@ -7,7 +7,7 @@ RAIN (Redundant Array of Independent Nodes) 的适用场景是万维网应用。
 
 机制：
 - Data Striping：把数据进行segmenting，然后把每个segment分别存储到不同的physical node中，通过这种机制，一个大的logical node可以由多个小的physical node虚拟而成，并且可以通过持续地增加physical node来持续地扩展这个logical node的容量，从而实现endless big。
-- Node Mirroring：在另一个Node中对目标Node中发生的读写操作进行real time replay，以获得continuous availability。
+- Node Mirroring：在另外的Node中对目标Node中发生的读写操作进行real time replay，以获得continuous availability。
 
 形式：
 - RAIN 0：进行Data Striping。
