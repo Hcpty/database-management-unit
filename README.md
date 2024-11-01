@@ -14,8 +14,25 @@ A note about Redundant Array of Independent Nodes (RAIN).
 
 简单易用的是以上三种形式，借助Parity机制还可以实现一些复杂而难用的形式。
 
+下面提供一种通用的Data Striping方法：
+
+Datum Allocation Table：
+- Datum Identifier -> Logical Address
+
+Logical Address：
+- Node Number
+- Database Offset
+- Table Offset
+- Record Offset
+
+Node Table：
+- Node Number -> Node Address
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
+- [File Allocation Table - Wikipedia](https://en.wikipedia.org/wiki/File_Allocation_Table)
+- [Extent (file systems) - Wikipedia](https://en.wikipedia.org/wiki/Extent_(file_systems))
+- [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
 - [Available, Big and Fast - Hcpty](https://github.com/hcpty/available-big-and-fast)
