@@ -23,7 +23,9 @@ Logical Address -> Physical Address
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
-Table Capacity、Database Capacity和Node Capacity都是可以配置的选项。
+可配置的选项包括：
+- Table Capacity、Database Capacity、Node Capacity
+- Resource Type、Table Creation Script
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
