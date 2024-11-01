@@ -19,6 +19,8 @@ Logical Address -> Physical Address
 - Table Offset
 - Record Offset
 
+Resource Allocation Table是DMU在内部使用的，应用程序一般不能直接访问Resource Allocation Table。
+
 其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
@@ -26,8 +28,6 @@ Logical Address -> Physical Address
 可配置的选项包括：
 - Resource Type、Table Creation Script
 - Table Capacity、Database Capacity、Node Capacity
-
-Resource Allocation Table是DMU在内部使用的，应用程序一般不能直接访问Resource Allocation Table。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
