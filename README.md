@@ -13,7 +13,7 @@ Logical Address数据结构包含两个字段：
 
 Logical Address -> Physical Address
 
-Physical Address数据结构包含四个字段：
+其中，Physical Address数据结构包含四个字段：
 - Node Number
 - Database Offset
 - Table Offset
@@ -27,7 +27,7 @@ Address Table是DMU私有的。
 
 Node Number, Database Offset -> Node Address, Database Connection Arguments
 
-DMU和应用程序共享这个Node Database Table。
+Node Database Table是DMU和应用程序共享的。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
