@@ -1,48 +1,38 @@
 # Readme
-A note about Redundant Array of Independent Nodes (RAIN).
+A note about Dataspace Management Unit (DMU).
 
-### 独立节点冗余阵列
+### Logical Address
 
-RAIN (Redundant Array of Independent Nodes) 的适用场景是万维网应用。
+Logical Address数据结构包含两个字段：
+- Resource Type
+- Resource Identifier
 
-机制：
-- Data Striping：把数据进行segmenting，然后把每个segment分别存储到不同的physical node中，通过这种机制，一个大的logical node可以由多个小的physical node虚拟而成，并且可以通过持续地增加physical node来持续地扩展这个logical node的容量，从而实现endless big。
-- Node Mirroring：在另外的Node中对目标Node中发生的读写操作进行real time replay，以获得continuous availability。
+其中，Resoruce Identifier是富含语义的、用于外部使用的、面向用户的资源标识符。
 
-形式：
-- RAIN 0：进行Data Striping。
-- RAIN 1：进行Node Mirroring。
-- RAIN 01或RAIN 10：同时进行Data Striping和Node Mirroring。
+### Resource Table
 
-简单易用的是以上三种形式，借助Parity机制还可以实现一些复杂而难用的形式。
+Logical Address -> Physical Address
 
-一种通用的Data Striping的实现方法：
-
-Resource Allocation Table：
-- Resource Type, Resource Identifier -> Logical Address
-
-Logical Address：
+Physical Address数据结构包含四个字段：
 - Node Number
 - Database Offset
 - Table Offset
 - Record Offset
 
-Node Database Table：
-- Node Number, Database Offset -> Node Address, Database Connection Parameters
-
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
-其中，在某些情况下，可以使用特定的Hash Function进行 Resource Type, Resource Identifier -> Logical Address 的映射，以避免使用Datum Allocation Table。
+Address Table是DMU私有的。
 
-一种通用的Node Mirroring的实现方法：
+### Node Database Table
 
-借助Database Replication实现Node Mirroring。
+Node Number, Database Offset -> Node Address, Database Connection Arguments
+
+DMU和应用程序共享这个Node Database Table。
 
 ### Credits
-- Computer Systems: A Programmer's Perspective, Third Edition
+- [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
 - [File Allocation Table - Wikipedia](https://en.wikipedia.org/wiki/File_Allocation_Table)
 - [Extent (file systems) - Wikipedia](https://en.wikipedia.org/wiki/Extent_(file_systems))
-- [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
 - [Available, Big and Fast - Hcpty](https://github.com/hcpty/available-big-and-fast)
