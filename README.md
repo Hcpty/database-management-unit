@@ -28,6 +28,8 @@ Logical Address：
 Node Table：
 - Node Number -> Node Address
 
+其中，所有的Number和Offset都从0开始，并往上递增。
+
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
 - [RAID - Wikipedia](https://en.wikipedia.org/wiki/RAID)
