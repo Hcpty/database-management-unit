@@ -25,12 +25,6 @@ Logical Address -> Physical Address
 
 DMU借助Resource Allocation Table进行地址翻译和地址分配。
 
-Node Database Table：
-
-Node Number, Database Offset -> Node Address, Database Connection Arguments
-
-DMU借助Node Database Table获取数据库连接。
-
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
