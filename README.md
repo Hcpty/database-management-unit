@@ -5,21 +5,21 @@ DMU用于管理Dataspace，主要负责把Logical Address翻译成Physical Addre
 
 ### DMU (Dataspace Management Unit)
 
-Logical Address数据结构包含两个字段：
-- Resource Type
-- Resource Identifier
-
-其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
-
 Resource Allocation Table：
 
 Logical Address -> Physical Address
 
-其中，Physical Address数据结构包含四个字段：
+Logical Address数据结构包含两个字段：
+- Resource Type
+- Resource Identifier
+
+Physical Address数据结构包含四个字段：
 - Node Number
 - Database Offset
 - Table Offset
 - Record Offset
+
+其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
