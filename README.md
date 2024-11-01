@@ -29,7 +29,7 @@ Node Database Table：
 
 Node Number, Database Offset -> Node Address, Database Connection Arguments
 
-Node Database Table是DMU和应用程序共用的。
+Node Database Table是DMU和应用程序共用的，应用程序通过这个表获取数据库连接。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
