@@ -1,13 +1,15 @@
 # Readme
 A note about DMU (Dataspace Management Unit).
 
-DMU用于管理Dataspace，主要负责把Logical Address翻译成Physical Address，以及为指定的 (Resource Type, Resource Identifier) 二元组分配新的Physical Address。
+DMU主要负责地址翻译和地址分配。
 
-### DMU (Dataspace Management Unit)
+### 地址翻译
 
 Resource Allocation Table：
 
+```
 Logical Address -> Physical Address
+```
 
 其中，Logical Address数据结构包含两个字段：
 - Resource Type
@@ -15,22 +17,17 @@ Logical Address -> Physical Address
 
 其中，Physical Address数据结构包含四个字段：
 - Node Number
-- Database Offset
-- Table Offset
-- Record Offset
+- Database Number
+- Table Number
+- Record Number
 
-Resource Allocation Table是DMU在内部使用的，应用程序一般不能直接访问Resource Allocation Table。
+其中，Resource Identifier是含有语义的、面向用户的资源标识符。
 
-其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
+其中，所有的Number都从0开始，并在创建时逐1递增。
 
-其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
+注意，Resource Allocation Table可以是分段的，在这种情况下需要并行地查找多张Resource Allocation Table。
 
-可配置的选项包括：
-- Table Capacity、Table Creation Script、Resource Type
-- Database Capacity、Database Creation Script
-- Node Capacity
-
-可以拓展DMU使其支持Node Creation Script。
+### 地址分配
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
