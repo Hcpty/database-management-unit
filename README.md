@@ -11,7 +11,9 @@ Logical Address数据结构包含两个字段：
 
 其中，Resoruce Identifier是富含语义的、公开的、面向用户的资源标识符。
 
-### Resource Table
+### Resource Allocation Table
+
+Resource Allocation Table：
 
 Logical Address -> Physical Address
 
@@ -23,9 +25,11 @@ Logical Address -> Physical Address
 
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
-Address Table是DMU私有的。
+Resource Allocation Table是DMU私有的。
 
 ### Node Database Table
+
+Node Database Table：
 
 Node Number, Database Offset -> Node Address, Database Connection Arguments
 
