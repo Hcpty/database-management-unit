@@ -26,8 +26,11 @@ Resource Allocation Table是DMU在内部使用的，应用程序一般不能直�
 其中，所有的Number和Offset都从0开始，并在创建时逐1往上递增。
 
 可配置的选项包括：
-- Resource Type、Table Creation Script
-- Table Capacity、Database Capacity、Node Capacity
+- Table Capacity、Table Creation Script、Resource Type
+- Database Capacity、Database Creation Script
+- Node Capacity
+
+可以拓展DMU使其支持Node Creation Script。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
