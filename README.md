@@ -3,7 +3,7 @@ A note about TTMU (Typed Tablespace Management Unit).
 
 ### 分类的表空间管理单元
 
-主存以页为单位存储多个字节，而数据库以表为单位存储多条记录。
+主存以页为单位批量存储字节，而数据库以表为单位批量存储记录。
 
 Table Address包含以下字段：
 - Resource Type
