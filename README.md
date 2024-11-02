@@ -5,8 +5,11 @@ A note about TTMU (Typed Tablespace Management Unit).
 
 主存以页为单位，而数据库以表为单位。
 
-逻辑地址数据结构：
+Table Address数据结构：
 - Resource Type, Database Number, Table Number
+
+Record Address数据结构：
+- Table Address
 - Record Offset
 
 ### Credits
