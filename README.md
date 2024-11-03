@@ -13,7 +13,7 @@ DMU有两个特点：
 
 表地址查找的过程：
 - 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
-- DMU拥有一张表，其中记录了DMU为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，connections\[Database Number\]即为到对应的数据库的连接，字符串"table"串联Table Offset即为表的名称。
+- DMU拥有一张表，其中记录了DMU为每种Resource Type分配的Database的Database Number和Database Connection Arguments，其中字符串"database"串联Database Number即为数据库的名称，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，connections\[Database Number\]即为到表所在的数据库的连接，字符串"table"串联Table Offset即为表的名称。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
