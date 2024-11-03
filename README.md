@@ -12,13 +12,23 @@ DMU有几个特性：
 - 应用程序向DMU输入一个Resource Type，请求DMU为一个新资源分配一个表地址。
 - DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，对应的Resource Type的最后一个Database中的最后一个Table即为新资源的表地址。
 
+Allocation Table：
+```
+Resource Type, Database Number, Table Offset
+```
+
 表地址翻译的过程：
 - 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
-- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
+- DMU拥有一张表，其中记录了Database Administrator为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
+
+Connection Table：
+```
+Resource Type, Database Number, Database Connection Arguments
+```
 
 新增表的过程：
 - DUM拥有一张表，其中记录了关于一个数据库中最多允许存在多少张表以及一个表中最多允许存在多少条记录的配置，当新插入的记录的Offset超过了某个数值时，则新增表，当新创建的表的Offset超过了某个数值时，则先申请数据库，再新增表。
-- 更新上文中提到的两张分配表。
+- 在Allocation Table中插入一条新记录。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
