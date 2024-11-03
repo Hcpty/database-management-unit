@@ -1,11 +1,19 @@
 # Readme
-A note about TTMU (Typed Tablespace Management Unit).
+A note about DMU (Database Management Unit).
 
-### 分类的表空间管理单元
+### 数据库管理单元
 
-分类的表空间管理含有两层意思：
-- 数据库以表为单位批量存储记录。
-- 按照表存储的资源的类型对表进行分类，即让表拥有类型。另外，一个应用程序可能拥有非常多的表，在这种情况下，如果允许一个数据库存储多种类型的资源，会给Database Administration造成极大的不便，所以，最好让每一个数据库都只存储单一类型的资源，即让数据库也拥有类型。
+DMU有两个特点：
+- 以表为单位批量存储记录，表具有固定的大小。
+- 按照表存储的资源的类型对表进行分类，即让表拥有类型，另外，一个应用程序可能拥有非常多的表，在这种情况下，如果允许一个数据库存储多种类型的资源，这会给Database Administration造成极大的不便，因此，最好让每一个数据库都只存储单一类型的资源，即让数据库也拥有类型。
+
+表地址分配的过程：
+- 应用程序向DMU输入一个Resource Type，请求DMU为一个新资源分配一个表地址。
+- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，新资源的表地址为对应的Resource Type的最后一个Database中的最后一个Table。
+
+表地址查找的过程：
+- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
+- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为该数组的下标，connections\[Database Number\]即为对应的数据库连接，字符串"table"串联Table Offset即为该表地址对应的表的名称。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
