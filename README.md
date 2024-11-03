@@ -18,7 +18,7 @@ Resource Type, Database Number, Database Connection Arguments
 
 地址分配的过程：
 - 应用程序请求DMU为一个新资源分配一个地址，要求返回对应的数据库连接和表名。
-- DMU拥有一张表，其中记录了Database Administrator对每种Resource Type的分段配置，DMU事先读取该配置。
+- DMU拥有一张表，其中记录了Database Administrator对每种Resource Type的分段配置，DMU先读取该配置。
 - DMU还拥有另一张表，其中记录了DMU为每种Resource Type目前已经分配并使用的Database和Table，DMU查询对应的Resource Type的最后一个Database中的最后一个Table中的最后一个Record，然后查看查询的结果：
   - 如果Record Offset < Table Size - 1，说明表未满，那么直接返回对应的数据库连接和表名。
   - 否则如果Table Offset < Database Size - 1，说明数据库未满，那么在当前数据库中创建一个相同类型且Table Number为当前Table Number + 1的表，并在Allocation Table中添加一条记录，然后返回对应的数据库连接和表名。
