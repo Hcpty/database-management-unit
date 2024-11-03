@@ -9,7 +9,7 @@ DMU有两个特点：
 
 表地址分配的过程：
 - 应用程序向DMU输入一个Resource Type，请求DMU为一个新资源分配一个表地址。
-- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，新资源的表地址为对应的Resource Type的最后一个Database中的最后一个Table。
+- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，对应的Resource Type的最后一个Database中的最后一个Table即为新资源的表地址。
 
 表地址查找的过程：
 - 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
