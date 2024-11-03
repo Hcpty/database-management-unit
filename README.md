@@ -25,7 +25,7 @@ Resource Type, Database Number, Database Connection Arguments
 
 Segmenting Table：
 ```
-Resource Type, Database Size, Table Size, Database Creation Script, Table Creation Script
+Resource Type, Database Size, Table Size, Table Creation Script
 ```
 
 Allocation Table：
