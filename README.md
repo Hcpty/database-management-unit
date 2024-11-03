@@ -36,7 +36,7 @@ Resource Type, Database Number, Table Offset
 
 其他注意事项：
 - 如果数据库不提供限制表大小的接口，那么就可能会发生Record Offset超出DMU配置的限制的现象，允许这种现象发生。
-- 允许Database Administrator在DMU运行过程中在Connection Table中新增记录，以支持不停机扩容。
+- DMU支持Database Administrator在DMU运行过程中在Connection Table中新增记录，以支持不停机扩容。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
