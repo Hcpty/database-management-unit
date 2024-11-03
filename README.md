@@ -17,7 +17,7 @@ DMU有两个特性：
 - DMU拥有一张表，其中记录了DMU为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
 
 新增表的过程：
-- DUM拥有一张表，其中记录了关于一个数据库中最多允许存在多少张表以及一个表中最多允许存在多少条记录的配置，DMU包含一个单独的程序，其周期性地检查每种资源对应的数据库和表的使用情况，在需要的时候创建新的数据库和表，并更新对应的分配表。
+- DUM拥有一张表，其中记录了关于一个数据库中最多允许存在多少张表以及一个表中最多允许存在多少条记录的配置，DMU还包含一个独立的程序，其周期性地检查每种资源对应的数据库和表的使用情况，在需要的时候创建新的数据库和表，并更新对应的分配表。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
