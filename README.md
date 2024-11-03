@@ -34,6 +34,9 @@ Limitation Table：
 Database Size, Table Size
 ```
 
+其他注意事项：
+- 除非使用的数据库支持对每张表的大小设置限制，否则可能会出现Record Offset超出DMU配置的限制的情况，允许这种情况发生。
+
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
