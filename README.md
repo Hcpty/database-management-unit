@@ -36,7 +36,7 @@ Database Size, Table Size
 
 其他注意事项：
 - 如果使用的数据库不支持对每张表的大小设置限制，那么可能会发生Record Offset超出DMU配置的限制的现象，允许这种现象发生。
-- 应用程序通常使用具有语义的Universal Resource Identifier来定位资源，而非DMU分配的记录地址，所以通常需要使用一个额外的索引系统。
+- 应用程序通常使用具有语义的 URI (Universal Resource Identifier) 来定位资源，而非DMU分配的存储地址，所以通常需要搭配使用一个额外的索引系统。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
