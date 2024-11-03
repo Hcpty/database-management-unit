@@ -9,7 +9,7 @@ DMU有几个特点：
 - 当一个表的空间用尽时，需要新增一个相同类型的表，当对应的数据库的空间也用尽时，需要先申请一个相同类型的数据库，再新增一个相同类型的表。
 
 表地址分配的过程：
-- 应用程序向DMU输入一个Resource Type，请求DMU为一个新资源分配一个表地址。
+- 应用程序请求DMU为一个新资源分配一个表地址。
 - DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，对应的Resource Type的最后一个Database中的最后一个Table即为新资源的表地址。
 
 Allocation Table：
@@ -18,7 +18,7 @@ Resource Type, Database Number, Table Offset
 ```
 
 表地址翻译的过程：
-- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
+- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求返回该表地址对应的表。
 - DMU拥有一张表，其中记录了Database Administrator为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
 
 Connection Table：
