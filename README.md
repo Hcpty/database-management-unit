@@ -8,7 +8,7 @@ DMU具有以下特点：
 - 按照表存储的资源的类型对表进行分类，另外，一种资源可能占用很多张表，在这种情况下，如果允许一个数据库存储多种类型的资源，会给Database Administration造成极大的不便，因此，最好让每一个数据库都只存储单一类型的资源。
 
 地址翻译的过程：
-- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求返回对应的数据库连接和表名。
+- 应用程序向DMU输入一个地址 (Resource Type, Database Number, Table Offset, Record Offset)，请求返回对应的数据库连接和表名。
 - DMU拥有一张表，其中记录了Database Administrator事先为每种Resource Type分配的Database，其中包括Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，connections\[Database Number\]即为该表对应的数据库连接，字符串"table"串联Table Offset即为该表的表名。
 
 Connection Table：
@@ -17,7 +17,7 @@ Resource Type, Database Number, Database Connection Arguments
 ```
 
 地址分配的过程：
-- 应用程序请求DMU为一个新资源分配一个表地址，并返回对应的数据库连接和表名。
+- 应用程序请求DMU为一个新资源分配一个地址，并返回对应的数据库连接和表名。
 - DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database和Table，对应的Resource Type的最后一个Database中的最后一个Table即为新资源的表地址，分配表地址的过程中可能伴随着新增表的操作。
 
 Allocation Table：
