@@ -32,7 +32,7 @@ Resource Type, Database Number, Database Connection Arguments
 
 Limitation Table：
 ```
-Table Size, Database Size
+Database Size, Table Size
 ```
 
 ### Credits
