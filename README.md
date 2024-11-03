@@ -36,7 +36,7 @@ Database Size, Table Size
 
 其他注意事项：
 - 如果使用的数据库不支持对每张表的大小设置限制，那么可能会发生Record Offset超出DMU配置的限制的现象，允许这种现象发生。
-- 要根据需求对特定的记录建立特定的索引，以加快查找。
+- 要根据需求对记录建立索引，以加快查找。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
