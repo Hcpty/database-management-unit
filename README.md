@@ -36,7 +36,6 @@ Database Size, Table Size
 
 其他注意事项：
 - 如果使用的数据库不支持对每张表的大小设置限制，那么可能会发生Record Offset超出DMU配置的限制的现象，允许这种现象发生。
-- 应用程序一般使用有语义的标识符命名资源，而非DMU分配的存储地址，所以带DMU的存储系统通常不能单独使用，通常需要搭配额外的索引系统同时使用。
 
 ### Credits
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
