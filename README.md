@@ -30,6 +30,11 @@ Resource Type, Database Number, Database Connection Arguments
 - DMU拥有一张表，其中记录了关于一个数据库中最多允许存在多少张表以及一个表中最多允许存在多少条记录的配置，当新插入的记录的Offset超过了某个数值时，则新增一个相同类型的表，当新创建的表的Offset超过了某个数值时，则先申请一个相同类型的数据库，再新增一个相同类型的表。
 - 在Allocation Table中插入一条新的记录。
 
+Limitation Table：
+```
+Table Size, Database Size
+```
+
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
 - [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
