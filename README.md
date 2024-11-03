@@ -18,7 +18,7 @@ Resource Type, Database Number, Table Offset
 ```
 
 表地址翻译的过程：
-- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求返回该表地址对应的表。
+- 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求返回该表地址对应的数据库连接和表的名称。
 - DMU拥有一张表，其中记录了Database Administrator为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
 
 Connection Table：
