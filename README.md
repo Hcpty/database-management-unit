@@ -14,7 +14,7 @@ DMU有几个特性：
 
 表地址翻译的过程：
 - 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求DMU返回该表地址对应的表。
-- DMU拥有一张表，其中记录了DMU为每种Resource Type分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
+- DMU拥有一张表，其中记录了DMU为每种Resource Type已经分配的Database的Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，字符串"database"串联Database Number即为数据库的名称，connections\[Database Number\]即为到该表所在的数据库的连接，字符串"table"串联Table Offset即为该表的名称。
 
 新增表的过程：
 - DUM拥有一张表，其中记录了关于一个数据库中最多允许存在多少张表以及一个表中最多允许存在多少条记录的配置，当新插入的记录的Offset超过了某个数值时，则新增表，当新创建的表的Offset超过了某个数值时，则先申请数据库，再新增表。
