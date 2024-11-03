@@ -11,7 +11,7 @@ DMU的特性：
 - 应用程序向DMU输入一个地址 (Resource Type, Database Number, Table Offset, Record Offset)，请求返回对应的数据库连接和表名。
 - DMU拥有一张表，其中记录了Database Administrator为每种Resource Type分配的Database，DMU事先建立到这些数据库的连接，然后创建一个connections字典，以Resource Type为键、数组为值，以Database Number为数组下标、数据库连接为数组元素，connections\[Resource Type\]\[Database Number\]即为该表对应的数据库连接，字符串"table"串联Table Offset即为该表的表名。
 
-Connection Table：
+Database Table：
 ```
 Resource Type, Database Number, Database Connection Arguments
 ```
