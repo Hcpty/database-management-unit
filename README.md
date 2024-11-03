@@ -3,16 +3,9 @@ A note about TTMU (Typed Tablespace Management Unit).
 
 ### 分类的表空间管理单元
 
-主存以Page为单位批量存储Byte，而数据库以Table为单位批量存储Record。
-
-Table Address包含以下字段：
-- Resource Type
-- Database Number
-- Table Number
-
-Record Address包含以下字段：
-- Table Address
-- Record Offset
+分类的表空间管理含有两层意思：
+- 数据库以表为单位批量存储记录。
+- 按照表存储的资源的类型对表进行划分。
 
 ### Credits
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
