@@ -9,7 +9,7 @@ DMU具有以下特点：
 
 表地址翻译的过程：
 - 应用程序向DMU输入一个表地址 (Resource Type, Database Number, Table Offset)，请求返回对应的数据库连接和表名。
-- DMU拥有一张表，其中记录了Database Administrator为每种Resource Type分配的Database，其中包括Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，connections\[Database Number\]即为该表对应的数据库连接，字符串"table"串联Table Offset即为该表的表名。
+- DMU拥有一张表，其中记录了Database Administrator事先为每种Resource Type分配的Database，其中包括Database Number和Database Connection Arguments，DMU事先建立了到这些数据库的连接，并把这些连接放到一个connections数组中，并以Database Number为数组下标，connections\[Database Number\]即为该表对应的数据库连接，字符串"table"串联Table Offset即为该表的表名。
 
 Connection Table：
 ```
