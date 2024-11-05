@@ -38,5 +38,4 @@ Resource Type, Database Offset, Table Offset
 - 如果数据库没有设置限制表大小的特性，那么可能会发生Table Length超出DMU配置的Table Size的现象，DMU允许这种现象发生。
 
 ### Credits
-- [DB-Engines Ranking - popularity ranking of database management systems](https://db-engines.com/en/ranking)
 - [Page Table, Page Number and Byte Offset - Hcpty](https://github.com/hcpty/page-table-page-number-and-byte-offset)
