@@ -5,7 +5,7 @@ A note about DMU (Database Management Unit).
 
 DMU的特性：
 - DMU以表为单位存储记录，其中表具有固定的大小。
-- DMU按照表存储的资源的类型对表进行分类，另外，一种资源可能占用很多张表，在这种情况下，如果允许一个数据库存储多种类型的资源，会给Database Administration造成极大的不便，因此，最好让一个数据库只存储一种类型的资源。
+- DMU按照表存储的资源的类型对表进行分类。另外，一种资源可能占用很多张表，在这种情况下，如果允许一个数据库存储多种类型的资源，会给Database Administration造成极大的不便，因此，最好让一个数据库只存储一种类型的资源。
 
 地址翻译的过程：
 - 应用程序向DMU输入一个地址 (Resource Type, Database Offset, Table Offset, Row Offset)，请求返回对应的数据库连接和表名。
