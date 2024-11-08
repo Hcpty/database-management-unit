@@ -3,7 +3,7 @@ A note about Database Management Unit.
 
 ### Database Management Unit
 
-Table Catalog Database:
+Table Catalog Database：
 
 ```
 Table -> Database Offset, Database Connection Arguments, Weight
