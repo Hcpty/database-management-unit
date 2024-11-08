@@ -6,7 +6,7 @@ A note about Database Management Unit.
 Table Catalog Database：
 
 ```
-Table -> Database Offset, Database Connection Arguments, Weight
+Table, Database Offset, Weight, Database Connection Arguments
 ```
 
 ### Credits
