@@ -1,12 +1,24 @@
 # Readme
-A note about Database Management Unit.
+A note about Space Management Unit.
 
-### Database Management Unit
+### Space Management Unit
 
-Table Catalog Database：
+Bucket Catalog:
+
+```
+Bucket, Object Storage Offset, Object Storage Authentication Arguments, Weight
+```
+
+Table Catalog：
 
 ```
 Table, Database Offset, Database Connection Arguments, Weight
+```
+
+Topic Catalog：
+
+```
+Topic, Message Queue Offset, Message Queue Connection Arguments, Weight
 ```
 
 ### Credits
