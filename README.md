@@ -16,7 +16,6 @@ Bucket, Object Storage Offset, Object Storage Connection Arguments, Weight
 ```
 
 其他注意事项：
-- 一个 (Table, Database Offset) 二元组可以对应多个Partition。
 - Database本身不擅长文件存储，Database通常附带额外的Object Storage以支援文件存储。
 
 ### Credits
